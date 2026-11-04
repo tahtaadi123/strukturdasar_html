@@ -1,0 +1,114 @@
+Ini kodenya dengan komentar berbahasa Indonesia:
+
+```html
+<!DOCTYPE html> <!-- Menandakan dokumen ini memakai HTML5 -->
+<html lang="en"> <!-- Elemen utama halaman, bahasa dokumen: Inggris -->
+<head>
+<title>CSS Template</title> <!-- Judul yang tampil di tab browser -->
+<meta charset="utf-8"> <!-- Pengkodean karakter UTF-8 agar semua huruf tampil benar -->
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Lebar halaman menyesuaikan layar perangkat (responsif) -->
+<style>
+/* Berlaku untuk semua elemen */
+* {
+  box-sizing: border-box; /* Padding dan border dihitung dalam lebar/tinggi elemen */
+}
+
+/* Pengaturan dasar seluruh halaman */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Jenis huruf yang dipakai */
+}
+
+/* Tampilan header */
+header {
+  background-color: #0f054f; /* Warna latar abu-abu gelap */
+  padding: 30px;          /* Jarak isi ke tepi header */
+  text-align: center;     /* Teks rata tengah */
+  font-size: 35px;        /* Ukuran huruf */
+  color: rgb(255, 252, 252);           /* Warna teks putih */
+}
+
+/* Kolom kiri (menu): di-float agar sejajar dengan kolom kanan */
+nav {
+  float: left;         /* Mengapung ke kiri */
+  width: 30%;          /* Lebar 30% dari section */
+  height: 300px;       /* Tinggi tetap, hanya untuk demonstrasi (sebaiknya dihapus) */
+  background: #186fa9;    /* Warna latar abu-abu muda */
+  padding: 20px;       /* Jarak isi ke tepi kolom */
+}
+
+/* Daftar di dalam menu */
+nav ul {
+  list-style-type: none; /* Menghilangkan titik (bullet) pada daftar */
+  padding: 0;            /* Menghilangkan indentasi bawaan daftar */
+}
+
+/* Kolom kanan (isi artikel) */
+article {
+  float: left;               /* Mengapung ke kiri, tepat di samping nav */
+  padding: 20px;             /* Jarak isi ke tepi kolom */
+  width: 70%;                /* Lebar 70% (30% + 70% = 100%) */
+  background-color: #f1f1f1; /* Warna latar abu-abu sangat muda */
+  height: 300px;             /* Tinggi tetap, hanya untuk demonstrasi (sebaiknya dihapus) */
+}
+
+/* Clearfix: membersihkan efek float setelah kedua kolom */
+section::after {
+  content: "";     /* Membuat elemen kosong setelah isi section */
+  display: table;  /* Ditampilkan sebagai blok agar clear berfungsi */
+  clear: both;     /* Menghentikan efek float, jadi footer tidak naik ke samping */
+}
+
+/* Tampilan footer */
+footer {
+  background-color: #777; /* Warna latar abu-abu */
+  padding: 10px;          /* Jarak isi ke tepi footer */
+  text-align: center;     /* Teks rata tengah */
+  color: white;           /* Warna teks putih */
+}
+
+/* Layout responsif: aktif pada layar selebar 600px atau kurang */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;   /* Kedua kolom jadi selebar penuh, sehingga tersusun atas-bawah */
+    height: auto;  /* Tinggi menyesuaikan isi */
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Layout Float</h2> <!-- Judul halaman -->
+<p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on top of each other.</p> <!-- Penjelasan isi contoh -->
+<p>Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML Responsive.)</p> <!-- Petunjuk mengubah ukuran jendela browser -->
+
+<!-- Bagian header -->
+<header>
+  <h2>Cities</h2> <!-- Judul header -->
+</header>
+
+<!-- Pembungkus dua kolom (menu dan artikel) -->
+<section>
+  <!-- Kolom kiri: menu navigasi -->
+  <nav>
+    <ul>
+      <li><a href="#">London</a></li> <!-- Tautan menu London -->
+      <li><a href="#">Paris</a></li>  <!-- Tautan menu Paris -->
+      <li><a href="#">Tokyo</a></li>  <!-- Tautan menu Tokyo -->
+    </ul>
+  </nav>
+  
+  <!-- Kolom kanan: isi artikel -->
+  <article>
+    <h1>London</h1> <!-- Judul artikel -->
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p> <!-- Paragraf 1 -->
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p> <!-- Paragraf 2 -->
+  </article>
+</section>
+
+<!-- Bagian footer -->
+<footer>
+  <p>Footer</p> <!-- Teks footer -->
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Praktikum HTML Gabungan</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    Assalamulaikum World
+    <hr>
+
+    <h1>saya belajar html pada minggu ke 11</h1>
+    <h2>semoga saya belajar dengan lancar tanpa halangan</h2>
+    <h3>saya siap pusing</h3>
+    <h4>siap latihan html</h4>
+    <h5>siap nggak tahu & siap bertanya</h5>
+    <h6>siap siap pusing</h6>
+    <h7>siap siap pusing</h7>
+    <hr>
+
+    <h1> kancil kampung durian runtuh </h1>
+    <p> niki ndamel nulis paragraf <br> eng sakwijinineng dino enek kancel hang elom utowo luwe
+    kancil niku hayawan cilik kang enak daginge damel tiang hang biso masak, ngapunten e kulo awali.
+ehmmm onok kancil sangkinng hutan mlampah teng sesarean e warga kampung durian runtuh enten tok dalang
+lagi nanem timun kancil e niku ngertos enten timun seng mateng pas bengine tok dalang sare sikancil ngelakoni 
+keoloan e iku nameng kancil mboten ngerts lek enten rembo teng mriko singkat e crito rembo manggung
+tok dalang tangi manton iku kancil panik teros tok dalang ambil tembakan mantoniku dorrr kacil e mati wareg
+tok dalang angsal dageng kancil yeeee</p>
+
+    <h1>The Power of kkryu </h1>
+    <p>pokok e iki paragraf siji,</p>
+    <blockquote>
+    polijeeee sippppp............
+    </blockquote>
+    <hr>
+
+    <h1>werno seng kulo demeni</h1>
+    <ol>
+        <li>biru dongker</li>
+        <li>abu abu putih</li>
+        <li>putih</li>
+        <li>abang</li>
+    </ol>
+    <h1>My Favorite Colors 2</h1>
+    <ul>
+        <li>biru cerah</li>
+        <li>abu abu gelap</li>
+        <li>hitam</li>
+    </ul>
+    <hr>
+
+  
+    <h1>singkat saja "bismillah lakoni mumet."</h1>
+    <dl>
+        <dt>jawascript</dt>
+            <dd>cobalah jawa scrip dan kamu akan lebih mudah untuk coding
+                 NB : untuk jawir dari jawir</dd>
+        <dt>bismillah</dt>
+            <dd>ngapunten e lek kulo mboten pati paham</dd>
+    </dl>
+    <hr>
+
+    <header>
+        <h1>iki disain e</h1>
+    </header>
+    <nav>
+        <b>omah &nbsp; servic &nbsp; kontak</b>
+    </nav>
+    <main>
+              <h2>Desain Media Anyar lan Web</h2>
+        <p>MIF Media Design nawakake macem-macem layanan sing lengkap kanggo
+        ngunggahake anane web perusahaanmu menyang tingkat sabanjure.</p>
+        <h2>Nyukupi Kabutuhan Bisnismu</h2>
+        <p>Para desainer ahli kita bakal ngrungokake kowe nalika nggawe website
+        sing mbiyantu ngenalake lan ngembangake bisnismu.</p>
+    </main>
+    <footer>
+        <small><i>Hak Cipta &copy; 2020 Jenengmu Ana Kene</i></small>
+    </footer>
+    <hr>
+
+    <header>
+        <h1>Casita Sedona Panginepan &amp; Sarapan</h1>
+    </header>
+    <nav>
+        <b>Ngarep &nbsp;Kamar &nbsp;Acara &nbsp;Kontak</b>
+    </nav>
+    <main>
+        <aside>
+            <p><i>Enteni Madness Wrap
+            Maret sasi ngarep!</i></p>
+        </aside>
+        <section>
+            <h2>Blog Bistro</h2>
+            <article>
+                <header><h3>Wrap Valentine</h3></header>
+                <time datetime="2020-02-01">1 Februari 2020</time>
+                <p>Sandwich spesial sasi Februari yaiku Wrap Valentine &mdash;
+                pitik organik sing sehat kanggo jantung karo paprika abang panggang
+                ing wrap gandum utuh.</p>
+            </article>
+            <article>
+                <header><h3>Promosi Kopi Dina Iki</h3></header>
+                <time datetime="2020-01-12">12 Januari 2020</time>
+                <p>Nikmatana kopi paling enak ing pesisir ing kenyamanan omahmu. Kita
+                bakal nampilake rasa kopi gourmet sing beda saben dina, sing
+                dipanggang lokal, kanthi icip-icip bistro gratis lan diskon kanggo
+                kemasan siji pound.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <small><i>Hak Cipta &copy; 2026 tahta adi saputra</i></small>
+    </footer>
+
+</body>
+</html>
