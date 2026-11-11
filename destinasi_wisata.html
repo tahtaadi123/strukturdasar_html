@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Review Wisata Banyuwangi</title>
+  <style>
+
+html {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff4ec;
+  color: #222;
+}
+
+header {
+  background: linear-gradient(135deg, #e76f51, #f4a261);
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: 1px;
+}
+
+header h3 {
+  margin-top: 6px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+nav {
+  background-color: #264653;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #f4a261;
+  color: #222;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+h2 {
+  color: #c4532f;
+  border-bottom: 3px solid #2a9d8f;
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+.destinasi {
+  flex: 2;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+  align-self: flex-start;
+}
+
+.kotak-wisata {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.kartu {
+  border: 2px solid #ffd9c2;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fffaf6;
+}
+
+.kartu:hover {
+  border-color: #2a9d8f;
+  box-shadow: 0 6px 14px rgba(42, 157, 143, 0.35);
+}
+
+.gambar {
+  height: 100px;
+  font-size: 52px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.pantai { background: linear-gradient(135deg, #ffb347, #e76f51); }
+.hutan  { background: linear-gradient(135deg, #a7c957, #386641); }
+.laut   { background: linear-gradient(135deg, #48cae4, #2a9d8f); }
+.penyu  { background: linear-gradient(135deg, #90e0ef, #0077b6); }
+.surf   { background: linear-gradient(135deg, #00b4d8, #023e8a); }
+.cemara { background: linear-gradient(135deg, #95d5b2, #2d6a4f); }
+
+.isi {
+  padding: 12px 14px 16px;
+}
+
+.isi h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.isi p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.isi .lokasi {
+  color: #555;
+}
+
+.isi .label {
+  display: inline-block;
+  background-color: #2a9d8f;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.isi .tiket {
+  color: #c4532f;
+  font-weight: bold;
+}
+
+.isi button {
+  background-color: #e76f51;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.isi button:hover {
+  background-color: #2a9d8f;
+}
+
+.catatan {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 0;
+}
+
+
+.samping {
+  flex: 1;
+  min-width: 300px;
+  align-self: flex-start;
+}
+
+.kotak {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+}
+
+
+.komentar {
+  background-color: #fff4ec;
+  border-left: 4px solid #e76f51;
+  border-radius: 5px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+
+.komentar h4 {
+  margin: 0;
+}
+
+.komentar h4 span {
+  font-size: 12px;
+}
+
+time {
+  font-size: 13px;
+  font-weight: bold;
+  color: #c4532f;
+}
+
+.komentar p {
+  margin: 6px 0 0;
+}
+
+/* --- Form --- */
+label {
+  display: block;
+  margin: 10px 0 4px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 9px 10px;
+  border: 2px solid #f3d5c4;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2a9d8f;
+  outline: none;
+}
+
+.kirim {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+  background-color: #e76f51;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.kirim:hover {
+  background-color: #2a9d8f;
+}
+
+
+footer {
+  text-align: center;
+  background-color: #1b3a45;
+  color: #e8f3f1;
+  padding: 15px 0;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+
+  .samping {
+    min-width: 0;
+    align-self: stretch;
+  }
+}
+</style>
+</head>
+<body>
+
+
+  <header>
+    <h1>🌅 Review Wisata Banyuwangi</h1>
+    <h3>"Sunrise of Java, Pantainya Juara"</h3>
+  </header>
+
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Destinasi</a>
+    <a href="#">Ulasan</a>
+    <a href="#">Tips</a>
+  </nav>
+
+
+  <main>
+
+
+    <section class="destinasi">
+      <h2>Destinasi di Banyuwangi</h2>
+      <div class="kotak-wisata">
+
+        <article class="kartu">
+          <div class="gambar pantai">🌅</div>
+          <div class="isi">
+            <h3>Pantai Pulau Merah</h3>
+            <p class="lokasi">📍 Pesanggaran</p>
+            <p class="label">Pantai • Sunset</p>
+            <p>Bukit kecil dekat pantai yang bisa didekati saat air surut. Ombaknya juga sering dipakai berselancar.</p>
+            <p class="tiket">Tiket Rp 10.000</p>
+            <button>Lihat Detail</button>
+          </div>
+        </article>
+
+        <article class="kartu">
+          <div class="gambar hutan">🦌</div>
+          <div class="isi">
+            <h3>Pantai Bama, Baluran</h3>
+            <p class="lokasi">📍 Taman Nasional Baluran</p>
+            <p class="label">Alam • Pantai</p>
+            <p>Pasir putih dan air laut biru di kawasan taman nasional. Buka sekitar pukul 08.00 sampai 16.00.</p>
+            <p class="tiket">Tiket sekitar Rp 15.000 - 17.000</p>
+            <button>Lihat Detail</button>
+          </div>
+        </article>
+
+        <article class="kartu">
+          <div class="gambar laut">🤿</div>
+          <div class="isi">
+            <h3>Teluk Hijau</h3>
+            <p class="lokasi">📍 Desa Sarongan, Pesanggaran</p>
+            <p class="label">Snorkeling</p>
+            <p>Cocok untuk snorkeling karena banyak ikan dan terumbu karang. Buka sekitar pukul 07.00 sampai 16.30.</p>
+            <p class="tiket">Tiket gratis (cek di lokasi)</p>
+            <button>Lihat Detail</button>
+          </div>
+        </article>
+
+        <article class="kartu">
+          <div class="gambar penyu">🐢</div>
+          <div class="isi">
+            <h3>Pantai Sukamade</h3>
+            <p class="lokasi">📍 Desa Sarongan, Pesanggaran</p>
+            <p class="label">Konservasi</p>
+            <p>Dikenal sebagai tempat penangkaran penyu untuk membantu pelestariannya.</p>
+            <p class="tiket">Tiket Rp 10.000</p>
+            <button>Lihat Detail</button>
+          </div>
+        </article>
+
+        <article class="kartu">
+          <div class="gambar surf">🏄</div>
+          <div class="isi">
+            <h3>Pantai Plengkung (G-Land)</h3>
+            <p class="lokasi">📍 Alas Purwo, Teluk Grajagan</p>
+            <p class="label">Selancar</p>
+            <p>Terkenal dengan ombak panjang dan menantang, sering jadi lokasi kejuaraan selancar.</p>
+            <p class="tiket">Cek tarif di lokasi</p>
+            <button>Lihat Detail</button>
+          </div>
+        </article>
+
+        <article class="kartu">
+          <div class="gambar cemara">📸</div>
+          <div class="isi">
+            <h3>Pantai Cemara</h3>
+            <p class="lokasi">📍 Desa Pakis, Banyuwangi</p>
+            <p class="label">Foto • Santai</p>
+            <p>Favorit untuk hunting foto estetik dan buka 24 jam.</p>
+            <p class="tiket">Tiket Rp 2.000</p>
+            <button>Lihat Detail</button>
+          </div>
+        </article>
+
+      </div>
+      <p class="catatan">*Harga tiket dan jam buka dapat berubah, cek kembali sebelum berangkat.</p>
+    </section>
+
+
+    <aside class="samping">
+
+      <div class="kotak">
+        <h2>Ulasan Terbaru</h2>
+        <article class="komentar">
+          <h4>Rina <span>⭐⭐⭐⭐⭐</span></h4>
+          <time>Pulau Merah, 2 hari lalu</time>
+          <p>Sunset-nya cantik banget, pas air surut bisa jalan dekat ke bukitnya.</p>
+        </article>
+        <article class="komentar">
+          <h4>Dimas <span>⭐⭐⭐⭐</span></h4>
+          <time>Teluk Hijau, 5 hari lalu</time>
+          <p>Airnya jernih, ikannya banyak. Cocok untuk yang suka snorkeling.</p>
+        </article>
+        <article class="komentar">
+          <h4>Sari <span>⭐⭐⭐⭐⭐</span></h4>
+          <time>Pantai Cemara, 1 minggu lalu</time>
+          <p>Tiketnya murah dan spot fotonya banyak.</p>
+        </article>
+      </div>
+
+      <div class="kotak">
+        <h2>Tulis Ulasan</h2>
+        <label>Nama</label>
+        <input type="text" placeholder="Nama kamu">
+        <label>Tempat Wisata</label>
+        <select>
+          <option>Pantai Pulau Merah</option>
+          <option>Pantai Bama, Baluran</option>
+          <option>Teluk Hijau</option>
+          <option>Pantai Sukamade</option>
+          <option>Pantai Plengkung (G-Land)</option>
+          <option>Pantai Cemara</option>
+        </select>
+        <label>Rating</label>
+        <select>
+          <option>⭐⭐⭐⭐⭐ (5)</option>
+          <option>⭐⭐⭐⭐ (4)</option>
+          <option>⭐⭐⭐ (3)</option>
+          <option>⭐⭐ (2)</option>
+          <option>⭐ (1)</option>
+        </select>
+        <label>Ulasan</label>
+        <textarea rows="4" placeholder="Ceritakan pengalamanmu..."></textarea>
+        <button class="kirim">Kirim Ulasan</button>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <footer>
+    <small>
+      <i>Copyright &copy; 2026 Review Wisata Banyuwangi - Tugas CSS Teknik Informatika</i><br>
+      Politeknik Negeri Jember
+    </small>
+  </footer>
+
+</body>
+</html>
